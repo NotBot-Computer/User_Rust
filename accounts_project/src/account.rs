@@ -1,5 +1,6 @@
 use std::fmt;
 
+#[derive(Debug, Clone)]
 pub struct User {
     pub name: String,
     pub password: String,
@@ -12,6 +13,18 @@ impl User {
             name: name.to_string(),
             password: password.to_string(),
             locked: false,
+        }
+    }
+}
+
+pub struct Userbase {
+    users: HashMap<String, User>,
+}
+
+impl Userbase {
+    pub fn new() -> Self{
+        Self{
+            users: HashMap::new(),
         }
     }
 }
