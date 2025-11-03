@@ -27,4 +27,13 @@ impl Userbase {
             users: HashMap::new(),
         }
     }
+
+
+pub fn add_user(userbase: &mut Userbase, user: User) {
+    userbase.users.insert(user.name.clone(), user);
+}
+pub fn get_user(userbase: &Userbase, name: &str) -> Option<&User> {
+    self.users.get(name)
+    }
+
 }
