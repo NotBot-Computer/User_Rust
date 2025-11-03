@@ -32,11 +32,13 @@ impl Userbase {
     }
 
 
-pub fn add_user(userbase: &mut Userbase, user: User) {
-    userbase.users.insert(user.name.clone(), user);
-}
-pub fn get_user(userbase: &Userbase, name: &str) -> Option<&User> {
-    self.users.get(name)
+    pub fn add_user(&mut self, user: User) {
+        
+        self.users.insert(user.name.clone(), user);
     }
 
+
+    pub fn get_user(&self, name: &str) -> Option<&User> {
+        self.users.get(name)
+    }
 }
