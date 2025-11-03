@@ -5,3 +5,13 @@ pub struct User {
     pub password: String,
     pub locked: bool,
 }
+
+impl User {
+    pub fn new(name: &str, password: &str) -> Self{
+        Self{
+            name: name.to_string(),
+            password: password.to_string(),
+            locked: false,
+        }
+    }
+}
