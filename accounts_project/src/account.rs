@@ -1,4 +1,5 @@
 use std::fmt;
+use std::collections::HashMap;
 
 #[derive(Debug, Clone)]
 pub struct User {
@@ -17,6 +18,8 @@ impl User {
     }
 }
 
+
+#[derive(Debug, Clone)]
 pub struct Userbase {
     users: HashMap<String, User>,
 }
